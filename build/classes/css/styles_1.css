@@ -1,0 +1,30 @@
+* {
+    -fx-primaryColor : #2A2E37;
+    -fx-seconderyColor : #FFFF8D;
+    -fx-textColor : #B2B2B2;
+}
+
+.root{
+    -fx-background-color: -fx-primaryColor;
+}
+.glyph-icon{
+    -fx-text-fill: -fx-textColor;
+}
+.button{
+   -fx-text-fill: -fx-textColor;
+}
+.login-button{
+    -fx-border-color: -fx-seconderyColor;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+.login-button:hover{
+    -fx-border-color:-fx-seconderyColor;
+    -fx-background-color: -fx-seconderyColor;
+    -fx-text-fill: -fx-primaryColor;
+
+}
+.text-field{
+   -fx-text-fill: -fx-textColor;
+   -jfx-focus-color: -fx-seconderyColor;
+}

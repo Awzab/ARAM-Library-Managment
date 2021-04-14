@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="993.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanagments.FXMLDocumentController">
+   <children>
+      <BorderPane prefHeight="507.0" prefWidth="727.0">
+         <top>
+            <MenuBar style="-fx-background-color: #565e70 #565e70;" stylesheets="@../css/Styles.css" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <right>
+            <VBox prefHeight="479.0" prefWidth="135.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="addmember" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#LoadAddMember" prefHeight="79.0" prefWidth="135.0" style="-fx-background-color: #393f4c;" text="Add Member" textFill="#ffff8d">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USER" size="24" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="addbook" contentDisplay="TOP" mnemonicParsing="false" onAction="#goAddBook" prefHeight="79.0" prefWidth="135.0" style="-fx-background-color: #565e70;" text="Add Book" textFill="#c6c64d">
+                     <graphic>
+                       <FontAwesomeIconView glyphName="BOOK" size="24" /> 
+                     </graphic>
+                  </Button>
+                  <Button fx:id="allbook" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goAllBooks" prefHeight="79.0" prefWidth="135.0" style="-fx-background-color: #393f4c;" text="All Books" textFill="#ffff8d">
+                     <graphic>
+                      <FontAwesomeIconView glyphName="TABLE" size="24" /> 
+                     </graphic>
+                  </Button>
+                  <Button fx:id="allmembers" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goAllMembers" prefHeight="79.0" prefWidth="135.0" style="-fx-background-color: #565e70;" text="All Members" textFill="#c6c64d">
+                     <graphic>
+                       <FontAwesomeIconView glyphName="USERS" size="24" /> 
+                     </graphic>
+                  </Button>
+                  <Button fx:id="borrbook" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goIssueBook" prefHeight="79.0" prefWidth="135.0" style="-fx-background-color: #565e70;" text="Issue Book" textFill="#c6c64d">
+                     <graphic>
+                     <FontAwesomeIconView glyphName="BOOKMARK" size="24" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="goIssuedList" contentDisplay="TOP" layoutX="10.0" layoutY="247.0" mnemonicParsing="false" onAction="#goIssueList" prefHeight="79.0" prefWidth="135.0" style="-fx-background-color: #393f4c;" text="Issued Book List" textFill="#ffff8d">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CHECK" size="24" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="renew" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goRenew" prefHeight="84.0" prefWidth="135.0" style="-fx-background-color: #393f4c;" text="Renew/Submission" textFill="#ffff8d">
+                     <graphic>
+                     <FontAwesomeIconView glyphName="BOOK" size="24" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnOut" contentDisplay="TOP" layoutX="10.0" layoutY="416.0" mnemonicParsing="false" onAction="#goLogout" prefHeight="84.0" prefWidth="135.0" style="-fx-background-color: #393f4c;" text="Logout" textFill="#ffff8d">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="SIGN_OUT" size="24" />
+                     </graphic>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="toolbar-button" />
+                  <String fx:value="main-text" />
+                  <String fx:value="submission-container" />
+               </styleClass>
+            </VBox>
+         </right>
+         <center>
+            <AnchorPane id="HomePage" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutY="207.0" prefHeight="19.0" prefWidth="858.0">
+                     <children>
+                        <Text fill="#b2b2b2" layoutX="328.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="   Newest Collection Of Books" textAlignment="CENTER" wrappingWidth="854.13671875">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <Text fill="#b2b2b2" layoutX="228.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: rgb(69, 75, 52);" text="Welcome To" textAlignment="CENTER" wrappingWidth="307.13671875">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#ffff8d" layoutX="381.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: rgb(69, 75, 52);" text="ARAM" textAlignment="CENTER" wrappingWidth="307.13671875">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#b2b2b2" layoutX="23.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="More and more people/students are starting to ignore reading books/borowing from the Library becuase of the pandemic covid-19. so our Goal is to let people start reading/borowing  books like they used to from home! without paying anything! with our application." wrappingWidth="812.13671875">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="139.0" fitWidth="94.0" layoutX="94.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/book1.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="137.0" fitWidth="104.0" layoutX="294.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/book2.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="138.0" fitWidth="105.0" layoutX="485.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/book3.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="138.0" fitWidth="91.0" layoutX="675.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/book4.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="118.0" fitWidth="108.0" layoutX="186.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ARAM%20Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

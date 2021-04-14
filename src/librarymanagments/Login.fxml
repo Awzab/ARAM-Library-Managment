@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="539.0" prefWidth="520.0" stylesheets="@../css/styles_1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanagments.LoginController">
+   <children>
+      <JFXTextField fx:id="txtUser" layoutX="120.0" layoutY="235.0" prefHeight="47.0" prefWidth="325.0" promptText="Username" styleClass="text-field">
+         <font>
+            <Font size="20.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="txtPass" layoutX="120.0" layoutY="314.0" prefHeight="47.0" prefWidth="325.0" promptText="Password" styleClass="text-field">
+         <font>
+            <Font size="20.0" />
+         </font></JFXPasswordField>
+      <JFXButton fx:id="clickLogin" layoutX="163.0" layoutY="420.0" onAction="#lbllogin" prefHeight="32.0" prefWidth="195.0" styleClass="login-button" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></JFXButton>
+      <Label layoutX="167.0" layoutY="82.0" prefHeight="56.0" prefWidth="168.0" styleClass="header" text="Welcome" textFill="#b2b2b2">
+         <font>
+            <Font size="35.0" />
+         </font></Label>
+      <FontAwesomeIconView fill="#b2b2b2" glyphName="USER" layoutX="90.0" layoutY="277.0" size="30" />
+      <FontAwesomeIconView fill="#b2b2b2" glyphName="LOCK" layoutX="90.0" layoutY="359.0" size="30" />
+      <Label layoutX="321.0" layoutY="82.0" prefHeight="56.0" prefWidth="55.0" styleClass="header" text="To" textFill="#b2b2b2">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="82.0" prefHeight="56.0" prefWidth="105.0" styleClass="header" text="ARAM" textFill="#ffff8d">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOut" layoutX="120.0" layoutY="284.0" prefHeight="20.0" prefWidth="325.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOut1" layoutX="123.0" layoutY="364.0" prefHeight="20.0" prefWidth="325.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="154.0" fitWidth="168.0" layoutX="13.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ARAM%20Logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

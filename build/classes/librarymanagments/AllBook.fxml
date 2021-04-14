@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="rootPane" prefWidth="798.0" stylesheets="@../css/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarymanagments.AllBookController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="contentPane" prefHeight="525.0" prefWidth="798.0" stylesheets="@../css/dark-theme.css">
+         <children>
+            <TableView fx:id="tblBooks" fixedCellSize="0.0" layoutY="29.0" prefHeight="430.0" prefWidth="815.0">
+               <columns>
+                  <TableColumn fx:id="colID" maxWidth="2500.0" prefWidth="75.0" text="Book ID" />
+                  <TableColumn fx:id="colTitle" prefWidth="75.0" text="Title" />
+                  <TableColumn fx:id="colISBN" prefWidth="75.0" text="ISBN" />
+                  <TableColumn fx:id="colAuthor" prefWidth="75.0" text="Author" />
+                  <TableColumn fx:id="colPublisher" prefWidth="75.0" text="Publisher" />
+                  <TableColumn fx:id="colCategory" prefWidth="75.0" text="Category" />
+                  <TableColumn fx:id="colStatus" maxWidth="2800.0" prefWidth="75.0" text="Status" />
+               </columns>
+               <contextMenu>
+                  <ContextMenu styleClass="table-context">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleBookEditOption" text="Edit" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleBookDeleteOption" text="Delete" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <MenuBar layoutX="10.0" layoutY="10.0" prefHeight="32.0" prefWidth="722.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#exportAsPDF" text="Export as PDF" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <JFXButton fx:id="backbtn" layoutX="295.0" layoutY="472.0" onAction="#Back" text="BACK" />
+            <JFXButton fx:id="btnDelete" layoutX="408.0" layoutY="472.0" onAction="#deleteBook" text="DELETE" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

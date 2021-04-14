@@ -1,0 +1,189 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 6, 2021, 7:07:13 PM
+    Author     : AceGa
+*/
+* {
+    -fx-primary : #2A2E37;
+    -fx-secondary : #FFFF8D;
+    -fx-primarytext : #B2B2B2;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-green:#2E7D32;
+}
+
+#HomePage {
+
+    -fx-background-repeat: stretch;
+    -fx-background-size: 858 479;
+    -fx-background-position: center center;
+    -fx-background-color: #2A2E37;
+
+
+}
+
+#AddPane {
+
+    -fx-background-image:url("/images/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 454 599;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+
+}
+
+#Allbookpane {
+
+    -fx-background-image:url("/images/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 687 539;
+    -fx-background-position: center center;
+
+
+}
+
+#BorrowPane {
+
+    -fx-background-image:url("/images/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 606 522;
+    -fx-background-position: center center;
+
+}
+
+#tableview {
+
+    -fx-background-image:url("/images/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: 868 662;
+    -fx-background-position: center center;
+
+}
+
+
+.button{
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-font-size: 11pt;
+}
+
+.tab{
+    -fx-background-color: -fx-primary;
+    -fx-pref-width : 350;
+    -fx-pref-height : 60;
+}
+
+.menu-bar{
+    -fx-base : -fx-primary;
+    -fx-background-color: -fx-primary;
+}
+
+.context-menu
+{
+    -fx-background-color:  derive(-fx-primary, 20%);
+}
+
+.toolbar-button
+{
+    -fx-border-color: transparent;
+    -fx-background-color: derive(-fx-primary, 10%);
+    -fx-background-radius: 0px;
+    -fx-border-radius: 0px;
+}
+.toolbar-button:hover
+{
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+}
+
+.toolbar-button:hover .glyph-icon
+{
+    -fx-fill: -fx-primary;
+}
+
+.main-text
+{
+    -fx-fill: -fx-secondary;
+    -fx-font-size: 14pt;
+    -fx-text-alignment: center;
+}
+
+.submission-container{
+    -fx-background-color: derive(-fx-primary, 10%);
+}
+
+.menu .label
+{
+    -fx-text-fill: white;
+}
+
+.root{
+    -fx-background-color: -fx-primary;
+}
+
+.glyph-icon{
+    -fx-text-fill: -fx-primary;
+}
+
+.login-button{
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.login-button:hover{
+    -fx-border-color:-fx-secondary;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+
+}
+.text-field{
+    -fx-text-fill: -fx-primarytext;
+    -fx-font-size: 13pt;
+    -jfx-focus-color: -fx-secondary;
+    -fx-prompt-text-fill: #919197;
+}
+
+
+.combo-box-base {
+    -fx-font-size:18;
+    -fx-text-fill: white;
+    -fx-alignment: CENTER_LEFT;
+    -fx-content-display: LEFT;
+    -fx-prompt-text-fill: #919197;
+}
+
+.combo-box-popup .list-view 
+{
+    -fx-font-size:18;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+    -fx-background-color: -fx-secondary, -fx-secondary;
+}   
+
+.combo-box .list-cell {
+    -fx-background-color: -fx-primary;
+    -fx-font-size:18;
+    -fx-text-fill: -fx-secondary;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-font-size:18;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover {
+    -fx-font-size:18;
+    -fx-text-fill: black;
+    -fx-background-color:-fx-secondary ;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-font-size:18;
+    -fx-text-fill: black;
+    -fx-background-color:-fx-secondary ;
+
+}
